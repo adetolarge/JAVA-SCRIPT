@@ -60,5 +60,23 @@ console.log(mypowerbank)
 
 // PROMPT FUNCTION HELPS TO ASK QUESTION FROM A 
 // We use an assignment function to store the result
-let x = prompt("What is your name")
-alert("Welcome"+x)
+// let x = prompt("What is your name")
+// alert("Welcome"+x)
+
+// LEARNING FLOW CONTROL
+
+
+// ele.innerHtml = "Hello from JS"
+
+function checkAge(){
+    alert("clicked")
+}
+let ele= document.querySelector("#mydiv")
+let personAge = document.querySelector("#PersonAge")
+
+function checkAge(){
+    // ele.innerHtml = personAge.value
+    var age = personAge.value
+}
+
+// DOM DOCUMENT OBJECT MODEL 13 AUGUSGT 2024
