@@ -77,8 +77,67 @@ let personAge = document.querySelector("#PersonAge")
 function checkAge(){
     // ele.innerHtml = personAge.value
     var age = personAge.value
+
+    if (age > 30){
+        ele.innerHTML = 'You are old'
+    }else{
+        ele.innerHTML = 'Well .... getting there'
+    }
 }
 
 // DOM DOCUMENT OBJECT MODEL 13 AUGUSGT 2024
 // It is the modeling the html for java script to manipulate
+
+function ChangeImage(){
+    var image = document.getElementById("img")
+    image.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRReIMnJvLnWAih-KBus6k2zTLWh50liPuu_Q&s"
+    image.classList.add("img_round")
+}
+function loop() {
+    var out = document.querySelector("#output")
+    for(let i = 0; i < 100; i++){
+        out.innerHTML += "<br> >>"+ i
+        
+    }
+}
+function while_loop() {
+    var out = document.querySelector("#output");
+    var x = 90;
+    while(x>0){
+        out.innerHTML += "<br> >>"+ x
+        x--;
+    }
+
+}
+// API
+// Application Programming Interface. They are parts of the applications that cant work alone
+
+// function call_Api() {
+//     var out = document.querySelector("#output");
+//     fetch("https://dummyjson.com/recipes?limit=10&skip=10&select=name,image")
+//     .then((response)=>{
+//         if(response.status == 200){
+//             console.log("Wow Http Done")
+//             return response.json()
+//         }else{
+//             console.error("Request Failed")
+//         }
+//     }).then((data)=>{
+//        output.innerHTML = data.recipes[8].name
+//     })
+// }
+// Weather API
+function call_Api(){
+    var out = document.querySelector("#output");
+    fetch("https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}")
+    .then(response = reponse.json())
+    .then(data => {
+        const forecastData = data.list[0];
+        const temperature = forecastData.main.temp;
+        const humidity = forecastData.main.humidity;
+        const windSpeed = forecastData.wind.speed;
+        const description = forecastData.weather[0].description;
+
+    })
+}
 

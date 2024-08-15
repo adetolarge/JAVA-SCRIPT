@@ -1,9 +1,14 @@
-#content{
-    display: none;
-    margin-top: 20px;
+img{
+    margin: 10px;
+    border: solid yellow 3px;
+    transition: all 2s;
 }
 
-#error{
-    color: red;
-    margin-top: 10px;
+.img_round{
+    border: solid green 1px;
+    margin: 20px;
+    height: 100;
+    width: 100px;
+    object-fit: cover;
+    border-radius: ;
 }
