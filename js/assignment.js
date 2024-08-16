@@ -16,8 +16,7 @@ function call_Api(){
           <p>Temperature: ${temperature}°C</p>
           <p>Humidity: ${humidity}%</p>
           <p>Wind Speed: ${windSpeed} m/s</p>
-          <p>Description: ${description}</p>
-        `;
+          <p>Description: ${description}</p>`;
       })
       .catch(error => console.error('Error:', error));
 }

@@ -112,32 +112,45 @@ function while_loop() {
 // API
 // Application Programming Interface. They are parts of the applications that cant work alone
 
-// function call_Api() {
-//     var out = document.querySelector("#output");
-//     fetch("https://dummyjson.com/recipes?limit=10&skip=10&select=name,image")
-//     .then((response)=>{
-//         if(response.status == 200){
-//             console.log("Wow Http Done")
-//             return response.json()
-//         }else{
-//             console.error("Request Failed")
-//         }
-//     }).then((data)=>{
-//        output.innerHTML = data.recipes[8].name
-//     })
-// }
-// Weather API
-function call_Api(){
+function call_Api() {
     var out = document.querySelector("#output");
-    fetch("https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}")
-    .then(response = reponse.json())
-    .then(data => {
-        const forecastData = data.list[0];
-        const temperature = forecastData.main.temp;
-        const humidity = forecastData.main.humidity;
-        const windSpeed = forecastData.wind.speed;
-        const description = forecastData.weather[0].description;
-
+    fetch("https://dummyjson.com/recipes?limit=10&skip=10&select=name,image")
+    .then((response)=>{
+        if(response.status == 200){
+            console.log("Wow Http Done")
+            return response.json()
+        }else{
+            console.error("Request Failed")
+        }
+    }).then((data)=>{
+    //    output.innerHTML = data.recipes[8].name
+    for(let x=0; x< data.recipes.length; x++){
+        var item = data.recipes[x]
+        out.innerHTML +=GenerateListItem(item.image,item.name)
+    }
     })
 }
+// Weather API
+// function call_Api(){
+//     var out = document.querySelector("#output");
+//     fetch("https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={9a7df5848e9ff4062cf5df5d04a018fe}")
+//     .then(response = reponse.json())
+//     .then(data => {
+//         const forecastData = data.list[0];
+//         const temperature = forecastData.main.temp;
+//         const humidity = forecastData.main.humidity;
+//         const windSpeed = forecastData.wind.speed;
+//         const description = forecastData.weather[0].description;
 
+//     })
+// }
+
+function GenerateListItem(img, name){
+    var html_code = `
+    <div>
+        <img src='${img}' height = "300" /><br>
+        <h3>${name}</h3>
+    </div> 
+    `;
+    return html_code;
+}
