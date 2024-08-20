@@ -131,6 +131,7 @@ function call_Api() {
     })
 }
 // Weather API
+// API is used for communication between APIs. there is a fine line between bussiness logic and API
 // function call_Api(){
 //     var out = document.querySelector("#output");
 //     fetch("https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={9a7df5848e9ff4062cf5df5d04a018fe}")
@@ -146,6 +147,7 @@ function call_Api() {
 // }
 
 function GenerateListItem(img, name){
+    // generate list item accepts the image and the name
     var html_code = `
     <div>
         <img src='${img}' height = "300" /><br>
