@@ -87,6 +87,7 @@ function checkAge(){
 
 // DOM DOCUMENT OBJECT MODEL 13 AUGUSGT 2024
 // It is the modeling the html for java script to manipulate
+// HTTP OR WEB SOCKET
 
 function ChangeImage(){
     var image = document.getElementById("img")
