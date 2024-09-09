@@ -2,4 +2,6 @@
 for (let i = 0; i < 5; i++) {
     console.log(i);
   }
-for (let)
+for (let i = 0){
+
+}
